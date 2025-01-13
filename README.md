@@ -1,8 +1,8 @@
-README: Mock Server with Flask and Robot Framework Integration
+**README: API Test with Robot Framework**
 
 This document provides a comprehensive guide on creating a mock server using Flask, generating mock data, and writing automated tests using the Robot Framework. It includes examples for handling authentication, managing products, reviews, and orders, and implementing access control.
 
-1. Setting Up the Mock Server
+**1. Setting Up the Mock Server**
 
 Prerequisites
 
@@ -60,12 +60,12 @@ Save the mock server code to a file (e.g., mock_server.py).
 
 Run the server:
 
-python mock_server.py
+python3 mock_server.py
 
 The server will be available at http://127.0.0.1:5000.
 
 
-2. Access Control and Authentication
+**2. Access Control and Authentication**
 
 Token-Based Authentication
 
@@ -83,7 +83,7 @@ authenticate(token): Validates a token.
 
 require_role(role, token): Ensures the token corresponds to a user with the specified role.
 
-3. Writing Tests in Robot Framework
+**3. Writing Tests in Robot Framework**
 
 Setting Up Robot Framework
 
@@ -91,15 +91,21 @@ Install required libraries:
 
 pip install requests robotframework-requests
 
-Create a test file (e.g., mock_server_tests.robot).
+Create a test file (e.g., orders_test.robot).
 
 Example Test Cases
 
-Authentication
+Orders
+
+Get All Orders As Admin
+    [Documentation]    Verify retrieving all orders as admin.
+    
+    ${headers}=    Set up Admin token
+    ${response}=    GET    ${BASE_URL_ORDERS}    headers=${headers}
+    Should Be Equal As Numbers    ${response.status_code}    200
 
 
-
-4. Common Issues and Troubleshooting
+**4. Common Issues and Troubleshooting**
 
 Port Already in Use
 
