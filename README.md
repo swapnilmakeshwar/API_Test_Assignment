@@ -6,53 +6,53 @@ This document provides a comprehensive guide on creating a mock server using Fla
 
 Prerequisites
 
-Python 3.7 or higher
-
-Flask (pip install flask)
-
-Robot Framework (pip install robotframework)
-
-Mock Server Code
+    Python 3.7 or higher
+    
+    Flask (pip install flask)
+    
+    Robot Framework (pip install robotframework)
+    
+    Mock Server Code
 
 The mock server handles authentication and routes for Products, Reviews, and Orders. The following endpoints are implemented:
 
 Authentication Endpoints
 
-POST /api/v1/auth/login: Log in a user.
-
-GET /api/v1/auth/logout: Log out a user.
+    POST /api/v1/auth/login: Log in a user.
+    
+    GET /api/v1/auth/logout: Log out a user.
 
 Product Endpoints
 
-GET /api/v1/products: Retrieve all products.
-
-POST /api/v1/products: Create a new product (admin only).
-
-DELETE /api/v1/products/<id>: Delete a product by ID (admin only).
+    GET /api/v1/products: Retrieve all products.
+    
+    POST /api/v1/products: Create a new product (admin only).
+    
+    DELETE /api/v1/products/<id>: Delete a product by ID (admin only).
 
 Review Endpoints
 
-GET /api/v1/reviews: Retrieve all reviews.
-
-GET /api/v1/reviews/<id>: Retrieve a single review by ID.
-
-POST /api/v1/reviews: Create a new review.
-
-PUT /api/v1/reviews/<id>: Update a review by ID.
-
-DELETE /api/v1/reviews/<id>: Delete a review by ID.
+    GET /api/v1/reviews: Retrieve all reviews.
+    
+    GET /api/v1/reviews/<id>: Retrieve a single review by ID.
+    
+    POST /api/v1/reviews: Create a new review.
+    
+    PUT /api/v1/reviews/<id>: Update a review by ID.
+    
+    DELETE /api/v1/reviews/<id>: Delete a review by ID.
 
 Order Endpoints
 
-GET /api/v1/orders: Retrieve all orders (admin only).
-
-GET /api/v1/orders/<id>: Retrieve a single order by ID (admin only).
-
-POST /api/v1/orders: Create a new order.
-
-PUT /api/v1/orders/<id>: Update an order by ID (admin only).
-
-DELETE /api/v1/orders/<id>: Delete an order by ID (admin only).
+    GET /api/v1/orders: Retrieve all orders (admin only).
+    
+    GET /api/v1/orders/<id>: Retrieve a single order by ID (admin only).
+    
+    POST /api/v1/orders: Create a new order.
+    
+    PUT /api/v1/orders/<id>: Update an order by ID (admin only).
+    
+    DELETE /api/v1/orders/<id>: Delete an order by ID (admin only).
 
 Running the Server
 
